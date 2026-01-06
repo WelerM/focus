@@ -1,0 +1,11 @@
+#Fazer responsividade das areas CLIENTES e PARCEIROS
+
+Na area Clientes, fazer carrosel automatico com apenas os nomes dos edificios e possivelmente seus endereços abaixo
+
+# Encaixar textos dnetro do carousel principal (index.html)
+
+#Fazer carrossel de clientes na área clientes
+
+#Remover formulario das paginas de "saiba mais"
+
+#realizar compressão de fotos para diminuir tamanho do site

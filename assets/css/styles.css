@@ -36,12 +36,40 @@ li {
     list-style: none;
 }
 
-h1, h5{
+
+.container-servicos > div > h1 {
     font-family: 'Arimo', sans-serif;
     font-family: 'Lora', serif;
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+    font-size: 1.25rem;
+    font-weight: 400;
+
 }
+.container-sobre > div > div> h1 {
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Lora', serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+
+}
+.container-clientes > div > div> h1 {
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Lora', serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+
+}
+.container-parceiros > div > div> h1 {
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Lora', serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+
+}
+
 p {
     margin: 0;
     font-family: 'Arimo', sans-serif;
@@ -67,12 +95,12 @@ nav {
 }
 
 .nav-container {
-    padding: 0px 50px;
+    padding: 0px 0px;
 }
 
 .img-logo {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
 
 }
 
@@ -85,6 +113,25 @@ nav {
 .btn-menu {
     padding: 10px 5px;
 }
+
+
+
+#carousel-inner-principal>div>div h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+#carousel-inner-principal>div>div p {
+    /* font-family:Arial, Helvetica, sans-serif; */
+    font-family: "Lato-light", sans-serif;
+    font-style: normal;
+    font-size: 13px;
+}
+
+
+
 
 
 
@@ -101,6 +148,7 @@ nav {
     .nav-container {
         padding: 0px 0px;
     }
+
 
 }
 
@@ -145,7 +193,7 @@ nav {
 
 .carousel-caption {
     left: 50%;
-    top: 59%;
+    top: 56%;
     transform: translate(-50%, -50%);
 }
 
@@ -155,75 +203,15 @@ nav {
 
 .carousel-caption>h1 {
     font-size: 8vw;
+
     word-break: keep-all;
     font-family: 'Lora', serif;
 }
 
 #carousel-inner-principal>.carousel-item {
-    height: 450px;
+    height: 300px;
 }
 
-@media(min-width: 500px) {
-
-    .logo-text {
-        font-size: 20px;
-        font-family: 'Lora', serif;
-        font-family: 'Arimo', sans-serif;
-    }
-
-    .img-logo {
-        width: 100%;
-        height: 100%;
-    }
-
-    #carousel-inner-principal>.carousel-item {
-        height: 550px;
-        background-color: black;
-    }
-
-
-    .carousel-caption>h1 {
-        font-size: 40px;
-        word-break: keep-all;
-    }
-
-
-
-    .carousel-caption>h1 {
-        font-size: 8vw;
-        word-break: keep-all;
-    }
-
-    .carousel-caption>p {
-        font-size: 17px;
-    }
-
-
-
-}
-
-@media(min-width: 992px) {
-
-    .carousel-item>.carousel-caption {
-        bottom: -2rem;
-    }
-
-    .carousel-caption>h1 {
-        font-size: 5rem;
-    }
-
-    .carousel-caption>p {
-        font-size: 20px;
-    }
-
-}
-
-@media(min-width: 540px) {
-
-    #carousel-clientes {
-        display: flex;
-    }
-}
 
 
 
@@ -242,16 +230,12 @@ nav {
     text-decoration: none;
 }
 
-/* .servicos-blue-ul > li:hover{
-    cursor: pointer;
-    background-color: var(--main-color-hover);
-    transition: 0.3s;
-}
- */
+
 .container-servicos {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 
 }
 
@@ -264,62 +248,6 @@ nav {
     width: auto;
     margin: 0 auto;
 }
-
-
-@media(min-width: 600px) {
-    .container-servicos {
-        flex-direction: row;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.329);
-    }
-}
-
-@media(min-width: 1100px) {
-    .servicos-main-container>div {
-        display: flex;
-    }
-
-    .container-servicos-img {
-
-        padding-right: 0px;
-    }
-
-    .servicos-main-container>div>form {
-        width: auto;
-        margin: 0 0;
-    }
-}
-
-@media(max-width: 954px) {
-    .card-body {
-        text-align: center;
-    }
-
-    .card-body>.card-text {
-        display: none;
-    }
-
-    .card-body>button {
-        display: none;
-    }
-
-}
-
-@media(min-width: 954px) {
-    .card-body {
-        padding: 15px;
-        padding-bottom: 20px;
-    }
-
-
-}
-
-
-
-
-
-
-
-
 
 
 /*    SOBRE    */
@@ -340,52 +268,14 @@ nav {
 
 
 
-
-@media(min-width: 761px) {
-    .sobre-textos {
-        width: 50%;
-    }
-
-    .sobre-imagem {
-        display: flex;
-
-    }
-}
-
-@media(min-width: 500px) {
-    .container-cards-smaller-screens {
-        display: none;
-    }
-
-    .container-cards-bigger-screens {
-        display: flex;
-    }
-}
-
-@media(min-width: 805px) {
-    .container-cards-bigger-screens>.container-xl {
-        justify-content: space-between;
-    }
-}
-
-
-
-
-
-
-
-
 /*   CLIENTES   */
-.clientes-screns-container{
-    display: flex;
-    flex-direction:column ;
-}
 
 
 .clientes-bg-screens {
     display: none;
 }
-.clientes-bg-screens-left-text{
+
+.clientes-bg-screens-left-text {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
@@ -397,36 +287,7 @@ nav {
 
 
 
-@media(min-width: 466px) {
-    .clientes-bg-screens {
-        display: flex;
-    }
 
-    .clientes-sm-screens {
-        display: none;
-        width: 100%;
-    }
-
-}
-@media(min-width: 870px) {
-    .clientes-screns-container{
-        display: flex;
-        flex-direction:row ;
-    }
-    
- 
-    .clientes-bg-screens {
-        width: 50%;
-    }
-    .clientes-bg-screens-left-text{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        margin-top: 0px;
-    }
-
-
-}
 
 
 
@@ -442,16 +303,6 @@ nav {
 
 }
 
-@media(min-width: 466px) {
-    .parceiros-bg-screens {
-        display: flex;
-    }
-
-    .parceiros-sm-screens {
-        display: none;
-    }
-
-}
 
 
 
@@ -479,27 +330,6 @@ nav {
     max-width: 450px;
 }
 
-@media(min-width: 900px) {
-
-    .container-contato>.container-xl {
-        flex-direction: row;
-    }
-
-    .contato-section-text {
-        text-align: start;
-    }
-
-    .contato-section-text>h1 {
-        font-size: 60px;
-    }
-
-    .contato-section-text>h1 {
-        font-size: 60px;
-    }
-
-
-}
-
 
 
 
@@ -511,12 +341,7 @@ nav {
     justify-content: center;
 }
 
-@media(min-width: 640px) {
 
-    .footer-top-grid {
-        flex-direction: row;
-    }
-}
 
 .btn-wpp {
     position: fixed;
@@ -530,15 +355,6 @@ nav {
 }
 
 
-
-
-@media(min-width: 992px) {
-    .img-logo-footer {
-        width: 70px;
-    }
-
-
-}
 
 
 
@@ -563,32 +379,19 @@ nav {
 
 
 /* /PÁGINA DE CONTATO */
-.contato-main-container{
-    background-image: url('../images/logowhite.PNG');
-    background-repeat: no-repeat;
-    background-position:top 20px right -50px;
-    background-size: 25%;
-}
+.contato-main-container {}
 
-.contato-main-container> form{
+.contato-main-container>form {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    padding: 2rem 1rem ;
+    padding: 2rem 1rem;
 
-    
+
 }
 
-@media(min-width: 450px){
-    
-    .contato-main-container> form{
-        
-        width: 450px;
-        padding: 2rem 3rem ;
-}
-}
 
 
 
@@ -596,6 +399,224 @@ nav {
 
 /* /PÁGINA DE EPPRESA */
 
-.test{
+.test {
     color: #F6F9FE;
 }
+
+
+
+
+
+@media(min-width: 450px) {
+
+    .contato-main-container>form {
+
+        width: 450px;
+        padding: 2rem 3rem;
+    }
+}
+
+@media(min-width: 466px) {
+    .clientes-bg-screens {
+        display: flex;
+    }
+
+    .clientes-sm-screens {
+        display: none;
+        width: 100%;
+    }
+
+    .parceiros-bg-screens {
+        display: flex;
+    }
+    
+    .parceiros-sm-screens {
+        display: none;
+    }
+}
+
+
+@media(min-width: 500px) {
+
+    .logo-text {
+        font-size: 20px;
+        font-family: 'Lora', serif;
+        font-family: 'Arimo', sans-serif;
+    }
+
+    .img-logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    #carousel-inner-principal>.carousel-item {
+        height: 450px;
+        background-color: black;
+    }
+
+
+    .carousel-caption>h1 {
+        font-size: 40px;
+        word-break: keep-all;
+    }
+
+
+
+    .carousel-caption>h1 {
+        font-size: 8vw;
+        word-break: keep-all;
+    }
+
+    .carousel-caption>p {
+        font-size: 17px;
+    }
+
+   .container-cards-smaller-screens {
+        display: none;
+    }
+
+    .container-cards-bigger-screens {
+        display: flex;
+    }
+
+}
+
+@media(min-width: 540px) {
+
+    #carousel-clientes {
+        display: flex;
+    }
+}
+
+@media(min-width: 600px) {
+    .container-servicos {
+        flex-direction: row;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+    }
+}
+@media(min-width: 640px) {
+
+    .footer-top-grid {
+        flex-direction: row;
+    }
+}
+@media(min-width: 761px) {
+    .sobre-textos {
+        width: 50%;
+    }
+
+    .sobre-imagem {
+        display: flex;
+
+    }
+}
+
+@media(min-width: 805px) {
+    .container-cards-bigger-screens>.container-xl {
+        justify-content: space-between;
+    }
+}
+
+
+@media(min-width: 870px) {
+    .clientes-screns-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .clientes-bg-screens {
+        width: 50%;
+    }
+
+    /* .clientes-bg-screens-left-text {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-top: 0px;
+    } */
+
+
+}
+
+@media(min-width: 900px) {
+
+    .container-contato>.container-xl {
+        flex-direction: row;
+    }
+
+    .contato-section-text {
+        text-align: start;
+    }
+
+    .contato-section-text>h1 {
+        font-size: 60px;
+    }
+
+    .contato-section-text>h1 {
+        font-size: 60px;
+    }
+
+
+}
+
+
+@media(min-width: 954px) {
+    .card-body {
+        padding: 15px;
+        padding-bottom: 20px;
+    }
+
+}
+
+@media(min-width: 992px) {
+
+    .carousel-item>.carousel-caption {
+        bottom: -2rem;
+    }
+
+    .carousel-caption>h1 {
+        font-size: 5rem;
+    }
+
+    .carousel-caption>p {
+        font-size: 20px;
+    }
+   .img-logo-footer {
+        width: 70px;
+    }
+
+}
+
+@media(min-width: 1100px) {
+    .servicos-main-container>div {
+        display: flex;
+    }
+
+    .container-servicos-img {
+
+        padding-right: 0px;
+    }
+
+    .servicos-main-container>div>form {
+        width: auto;
+        margin: 0 0;
+    }
+
+    #carousel-inner-principal>div>div h1 {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 50px;
+    }
+
+    #carousel-inner-principal>div>div p {
+        /* font-family:Arial, Helvetica, sans-serif; */
+        font-family: "Lato-light", sans-serif;
+        font-style: normal;
+        font-size: 17px;
+    }
+
+}
+
+
