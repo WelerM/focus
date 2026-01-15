@@ -1,226 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-
-
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Lora', serif;
-}
+/* ==========================================================================
+   1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Lora:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
     --main-color: #027bb8;
     --main-color-hover: #36ace7;
-
     --gray-color: #575757;
+    --light-bg: #F6F9FE;
 }
 
-.bg-main-color {
-    background: linear-gradient(90deg, var(--main-color), #42afe6)
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.custom-gray-color {
-    color: var(--gray-color);
-}
-
 
 body {
     max-width: 1920px;
     min-width: 260px;
     font-size: 16px;
+    font-family: 'Lora', serif; /* Fonte padrão do site */
+    color: var(--gray-color);
 }
 
-li {
-    list-style: none;
+/* Tipografia e Resets */
+h1, h2, h3, h4, h5 { font-family: 'Poppins', sans-serif; }
+p { font-family: 'Arimo', sans-serif; margin: 0; }
+a { text-decoration: none; transition: 0.3s; }
+li { list-style: none; }
+
+/* ==========================================================================
+   2. CLASSES UTILITÁRIAS (REUTILIZÁVEIS)
+   ========================================================================== */
+.bg-main-color { background: linear-gradient(90deg, var(--main-color), #42afe6); }
+.custom-gray-color { color: var(--gray-color); }
+.w-fit { width: fit-content; }
+
+/* Efeito de elevação para cards */
+.transition { transition: all 0.3s ease; }
+.transition:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
-
-
-
-
-/* ========= CONTAINER PRINCIPAL ========= */
-
-.container-principal {
-    display: flex;
-    /* align-items: center;
-        justify-content: center; */
-    padding: 20px 8px;
-
-
-}
-
-.container-principal>div>h1 {
-
-    font-size: 18px;
-
-}
-
-.container-principal>div>p {
-
-    font-size: 13px;
-    margin-bottom: 17px;
-    text-shadow: 10px 10px 40px rgba(63, 63, 63, 0.384);
-
-}
-
-.container-principal>div>ul>li {
-
-    font-size: 15px;
-
-}
-
-.container-clientes>div {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.clientes-container-images>* {
-    width: 70px;
-    height: 110px;
-
-}
-
-
-
-
-.container-servicos>div>h1 {
-    font-family: 'Arimo', sans-serif;
-    font-family: 'Lora', serif;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-
-}
-
-.container-sobre>div>div>h1 {
-    font-family: 'Arimo', sans-serif;
-    font-family: 'Lora', serif;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-
-}
-
-.container-clientes>div>div>h1 {
-    font-family: 'Arimo', sans-serif;
-    font-family: 'Lora', serif;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-
-}
-
-.container-parceiros>div>div>h1 {
-    font-family: 'Arimo', sans-serif;
-    font-family: 'Lora', serif;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-
-}
-
-p {
-    margin: 0;
-    font-family: 'Arimo', sans-serif;
-    font-family: 'Lora', serif;
-    font-family: 'Poppins', sans-serif;
-
-}
-
-a {
-    text-decoration: none;
-
-}
-
+/* ==========================================================================
+   3. NAVEGAÇÃO (HEADER)
+   ========================================================================== */
 nav {
     transition: background-color 0.3s ease;
-    background-color: transparent;
     height: 70px;
-
 }
 
-.navbar .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.nav-container {
-    padding: 0px 0px;
-}
-
-.img-logo {
-    width: 100%;
-    height: 100%;
-
-}
+.navbar .nav-item.dropdown:hover .dropdown-menu { display: block; }
 
 .logo-text {
     font-size: 15px;
-    font-family: 'Lora', serif;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
-.btn-menu {
-    padding: 10px 5px;
-}
+.img-logo { width: 100%; height: 100%; }
 
+/* ==========================================================================
+   4. CARROSSEL PRINCIPAL
+   ========================================================================== */
+#carousel-inner-principal .carousel-item { height: 300px; background-color: #000; }
 
-
-#carousel-inner-principal>div>div h1 {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-}
-
-#carousel-inner-principal>div>div p {
-    /* font-family:Arial, Helvetica, sans-serif; */
-    font-family: "Lato-light", sans-serif;
-    font-style: normal;
-    font-size: 13px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/*  PRINCIPAL  */
-.img-principal-1 {
-    background-image: url("../images/porteiro.jpg");
+.img-principal-1, .img-principal-2, .img-principal-3 {
     background-size: cover;
+    background-position: center;
     filter: brightness(0.5);
-    z-index: -1;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
-.img-principal-2 {
-    background-image: url("../images/recepcionista.jpg");
-    background-size: cover;
-    filter: brightness(0.5);
-    z-index: -1;
-    height: 100%;
-}
-
-.img-principal-3 {
-    background-image: url("../images/zelador.jpg");
-    background-size: cover;
-    filter: brightness(0.5);
-    z-index: -1;
-    height: 100%;
-}
+.img-principal-1 { background-image: url("../images/porteiro.jpg"); }
+.img-principal-2 { background-image: url("../images/recepcionista.jpg"); }
+.img-principal-3 { background-image: url("../images/zelador.jpg"); }
 
 .carousel-caption {
     left: 50%;
@@ -228,587 +87,307 @@ nav {
     transform: translate(-50%, -50%);
 }
 
-.carousel-item>.carousel-caption {
-    bottom: 2rem;
+.carousel-caption h1 { font-size: 8vw; word-break: keep-all; color: #fff; }
+
+/* ==========================================================================
+   5. SEÇÃO DE SERVIÇOS (CARDS ATUALIZADOS)
+   ========================================================================== */
+.container-servicos .card {
+    border-top: 4px solid var(--main-color) !important;
 }
 
-.carousel-caption>h1 {
-    font-size: 8vw;
-
-    word-break: keep-all;
-    font-family: 'Lora', serif;
-}
-
-#carousel-inner-principal>.carousel-item {
-    height: 300px;
-}
-
-
-
-
-
-
-/*   SERVIÇOS   */
-.card-body {
-    padding: 0px;
-}
-
-.card-title {
-    margin: 5px 0px;
-}
-
-.card.-title {
-    text-decoration: none;
-}
-
-
-.container-servicos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-
-}
-
-.container-servicos-img {
-    max-width: 600px;
-    padding: 16px;
-}
-
-.servicos-main-container>div>form {
-    width: auto;
-    margin: 0 auto;
-}
-
-
-/*    SOBRE    */
-.sobre-textos {
-    width: 100%;
-}
-
-.sobre-imagem {
-    display: none;
-    /*     width: 270px;
-    height: 300px */
-}
-
-
-
-
-
-
-
-
-/*   CLIENTES   */
-
-
-.clientes-bg-screens {
-    display: none;
-}
-
-.clientes-bg-screens-left-text {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-}
-
-.clientes-sm-screens {
-    width: 100%;
-}
-
-
-
-
-
-
-
-
-
-/*   PARCEIROS    */
-.parceiros-bg-screens {
-    display: none;
-}
-
-.parceiros-sm-screens {
-    display: flex;
-
-}
-
-
-
-
-
-
-
-
-/*   CONTATO   */
-
-.container-contato>.container-xl {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; */
-}
-
-.contato-section-text {
-    max-width: 600px;
-    text-align: center;
-}
-
-
-.container-contato>.container-xl>form {
-    width: 100%;
-    max-width: 450px;
-}
-
-
-
-
-/*   FOOTER    */
-.footer-top-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-.btn-wpp {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-
-.img-logo-footer {
-    width: 50px;
-    margin-left: 15px;
-}
-
-
-
-
-
-
-
-
-
-
-.js-li-hover {
-    transition: 0.5s;
-    cursor: pointer;
-    background-color: #36ace7;
-}
-
-
-
-.svg-green-mark {
-    width: 30px;
-    height: 30px;
-}
-
-
-
-/* /PÁGINA DE CONTATO */
-.contato-main-container {}
-
-.contato-main-container>form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    padding: 2rem 1rem;
-
-
-}
-
-
-
-
-
-
-/* /PÁGINA DE EPPRESA */
-
-.test {
-    color: #F6F9FE;
-}
-
-
-
-@media(min-width: 300px) {
-
-
-    .container-principal {
-        display: flex;
-        /* align-items: center;
-        justify-content: center; */
-        padding: 20px 8px;
-
-    }
-
-    .container-principal>div>h1 {
-
-        font-size: 18px;
-
-    }
-
-    .container-principal>div>p {
-
-        font-size: 13px;
-        margin-bottom: 17px;
-        text-shadow: 10px 10px 40px rgba(63, 63, 63, 0.384);
-
-    }
-
-    .container-principal>div>ul>li {
-
-        font-size: 15px;
-
-    }
-
-    .container-clientes>div {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .clientes-container-images>* {
-        width: 70px;
-        height: 110px;
-
-    }
-
-    .logo-text {
-        font-size: 17px;
-        font-family: 'Lora', serif;
-        font-family: 'Arimo', sans-serif;
-    }
-
-}
-
-
-
-
-
-
-@media(min-width: 390px) {
-
-
-    .container-principal {
-        display: flex;
-        /* align-items: center;
-        justify-content: center; */
-        padding: 20px 8px;
-
-
-    }
-
-    .container-principal>div>h1 {
-
-        font-size: 25px;
-
-    }
-
-    .container-principal>div>p {
-
-        font-size: 15px;
-        margin-bottom: 17px;
-        text-shadow: 10px 10px 40px rgba(63, 63, 63, 0.384);
-
-    }
-
-    .container-principal>div>ul>li {
-
-        font-size: 15px;
-
-    }
-
-    .container-clientes>div {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .clientes-container-images>* {
-        width: 70px;
-        height: 110px;
-
-    }
-
-    .logo-text {
-        font-size: 17px;
-        font-family: 'Lora', serif;
-        font-family: 'Arimo', sans-serif;
-    }
-
-}
-
-@media(min-width: 450px) {
-
-    .contato-main-container>form {
-
-        width: 450px;
-        padding: 2rem 3rem;
-    }
-}
-
-@media(min-width: 466px) {
-    .clientes-bg-screens {
-        display: flex;
-    }
-
-    .clientes-sm-screens {
-        display: none;
-        width: 100%;
-    }
-
-    .parceiros-bg-screens {
-        display: flex;
-    }
-
-    .parceiros-sm-screens {
-        display: none;
-    }
-}
-
-
-@media(min-width: 500px) {
-
-    .logo-text {
-        font-size: 20px;
-        font-family: 'Lora', serif;
-        font-family: 'Arimo', sans-serif;
-    }
-
-    .img-logo {
-        width: 100%;
-        height: 100%;
-    }
-
-    #carousel-inner-principal>.carousel-item {
-        height: 450px;
-        background-color: black;
-    }
-
-
-    .carousel-caption>h1 {
-        font-size: 40px;
-        word-break: keep-all;
-    }
-
-
-
-    .carousel-caption>h1 {
-        font-size: 8vw;
-        word-break: keep-all;
-    }
-
-    .carousel-caption>p {
-        font-size: 17px;
-    }
-
-    .container-cards-smaller-screens {
-        display: none;
-    }
-
-    .container-cards-bigger-screens {
-        display: flex;
-    }
-
-}
-
-@media(min-width: 540px) {
-
-    #carousel-clientes {
-        display: flex;
-    }
-}
-
-@media(min-width: 600px) {
-    .container-servicos {
-        flex-direction: row;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.329);
-    }
-}
-
-@media(min-width: 640px) {
-
-    .footer-top-grid {
-        flex-direction: row;
-    }
-}
-
-@media(min-width: 761px) {
-    .sobre-textos {
-        width: 50%;
-    }
-
-    .sobre-imagem {
-        display: flex;
-
-    }
-
-    .container-clientes>div,
-    .container-parceiros>div {}
-}
-
-@media(min-width: 805px) {
-    .container-cards-bigger-screens>.container-xl {
-        justify-content: space-between;
-    }
-}
-
-
-@media(min-width: 870px) {
-    .clientes-screns-container {
-        display: flex;
-        flex-direction: row;
-    }
-
-
-    .clientes-bg-screens {
-        width: 50%;
-    }
-
-    /* .clientes-bg-screens-left-text {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        margin-top: 0px;
-    } */
-
-
-}
-
-@media(min-width: 900px) {
-
-    .container-contato>.container-xl {
-        flex-direction: row;
-    }
-
-    .contato-section-text {
-        text-align: start;
-    }
-
-    .contato-section-text>h1 {
-        font-size: 60px;
-    }
-
-    .contato-section-text>h1 {
-        font-size: 60px;
-    }
-
-
-}
-
-
-@media(min-width: 954px) {
-    .card-body {
-        padding: 15px;
-        padding-bottom: 20px;
-    }
-
-}
-
-@media(min-width: 992px) {
-
-    .carousel-item>.carousel-caption {
-        bottom: -2rem;
-    }
-
-    .carousel-caption>h1 {
-        font-size: 5rem;
-    }
-
-    .carousel-caption>p {
-        font-size: 20px;
-    }
-
-    .img-logo-footer {
-        width: 70px;
-    }
-
-    .nav-container {
-        padding: 0px 0px;
-    }
-
-}
-
-@media(min-width: 1100px) {
-    .servicos-main-container>div {
-        display: flex;
-    }
-
-    .container-servicos-img {
-
-        padding-right: 0px;
-    }
-
-    .servicos-main-container>div>form {
-        width: auto;
-        margin: 0 0;
-    }
-
-    #carousel-inner-principal>div>div h1 {
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 50px;
-    }
-
-    #carousel-inner-principal>div>div p {
-        /* font-family:Arial, Helvetica, sans-serif; */
-        font-family: "Lato-light", sans-serif;
-        font-style: normal;
-        font-size: 17px;
-    }
-
-}
-
-.border-main-color {
-    border-color: #198754 !important;
-}
-
-/* --- NOVOS AJUSTES DE SERVIÇOS (UNIFICADOS) --- */
-
-/* Borda superior usando sua cor azul variável */
-.border-main-blue {
-    border-color: var(--main-color) !important;
-}
-
-/* Garante que o botão não estique na largura toda */
-.w-fit {
-    width: fit-content;
-}
-
-/* Efeito suave ao passar o mouse nos cards */
-.transition {
-    transition: all 0.3s ease;
-}
-
-.transition:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Ajuste de Padding interno para os novos cards de texto */
 .container-servicos .card-body {
     padding: 2rem 1.5rem !important;
 }
 
-/* Corrigindo a cor dos títulos nos cards */
 .container-servicos .card-title {
     color: var(--main-color);
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
+    margin-bottom: 15px;
 }
 
-/* Estilização básica do botão para seguir o seu gradiente */
 .container-servicos .btn.bg-main-color {
     border: none;
     padding: 8px 20px;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   6. SEÇÃO SOBRE / CLIENTES / CONTATO
+   ========================================================================== */
+.sobre-imagem { display: none; } /* Escondido no mobile */
+
+.clientes-container-images img { width: 70px; height: 110px; }
+
+.contato-main-container form {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem 1rem;
+}
+
+/* ==========================================================================
+   7. RODAPÉ E BOTÕES FIXOS
+   ========================================================================== */
+.footer-top-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-wpp {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 999;
+}
+
+.img-logo-footer { width: 50px; margin-left: 15px; }
+
+/* ==========================================================================
+   8. MEDIA QUERIES (RESPONSIVIDADE)
+   ========================================================================== */
+
+/* Dispositivos Pequenos (Mobile) */
+@media(min-width: 500px) {
+    .logo-text { font-size: 20px; }
+    #carousel-inner-principal .carousel-item { height: 450px; }
+}
+
+/* Tablets */
+@media(min-width: 761px) {
+    .sobre-textos { width: 50%; }
+    .sobre-imagem { display: flex; }
+}
+
+/* Desktops Médios */
+@media(min-width: 992px) {
+    .carousel-caption h1 { font-size: 5rem; }
+    .footer-top-grid { flex-direction: row; justify-content: space-between; }
+}
+
+/* Telas Grandes */
+@media(min-width: 1100px) {
+    #carousel-inner-principal h1 { font-size: 50px; }
+    #carousel-inner-principal p { font-size: 17px; }
+}
+
+/* Animação extra para elementos flutuantes (opcional) */
+.floating-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+
+
+
+
+/* SECTION SOBRE */
+
+/* Efeito de flutuar suave na imagem do Sobre */
+.floating-animation {
+    animation: float-sobre 6s ease-in-out infinite;
+}
+
+@keyframes float-sobre {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Garante que o texto se adapte bem no mobile */
+@media (max-width: 991px) {
+    .container-sobre {
+        text-align: center;
+    }
+    .container-sobre .row.g-3 div {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+/* --- SEÇÃO PARCEIROS --- */
+
+/* Estilização das logos dos parceiros */
+.img-partner {
+    max-width: 140px;
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(100%); /* Deixa as logos cinzas para um visual limpo */
+    opacity: 0.6;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.img-partner:hover {
+    filter: grayscale(0%); /* Ganha cor ao passar o mouse */
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Ajuste dos controles do carrossel para não ficarem em cima das logos */
+#carouselParceiros .carousel-control-prev,
+#carouselParceiros .carousel-control-next {
+    width: 5%;
+}
+
+/* No mobile as logos ficam um pouco menores */
+@media (max-width: 576px) {
+    .img-partner {
+        max-width: 100px;
+        max-height: 60px;
+    }
+}
+
+/* --- SEÇÃO CLIENTES --- */
+
+.cliente-card {
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee !important;
+}
+
+.cliente-card img {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+    /* Removemos o grayscale aqui para dar vida aos logos dos clientes */
+}
+
+.cliente-card:hover {
+    border-color: var(--main-color) !important;
+    background-color: var(--light-bg);
+}
+
+/* Ajuste de responsividade para o texto lateral */
+@media (max-width: 991px) {
+    .container-clientes {
+        text-align: center;
+    }
+    .container-clientes .d-flex {
+        justify-content: center;
+    }
+}
+
+
+
+/* Container Contato */
+.container-contato {
+    overflow: hidden;
+}
+
+/* Card de Contato */
+.contact-box {
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: scale(1.02);
+}
+
+
+
+
+/* Botão WhatsApp Premium */
+.btn-whatsapp-premium {
+    padding: 18px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(var(--bs-primary-rgb), 0.3);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-whatsapp-premium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(var(--bs-primary-rgb), 0.4);
+    background-color: #25d366; /* Cor oficial do WhatsApp no hover */
+}
+
+/* Ícones de Contato */
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Redes Sociais */
+.social-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f8f9fa;
+    /* color: #333; */
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: var(--main-color);
+    color: white;
+    transform: rotate(10deg);
+}
+
+
+/* Botão WhatsApp Flutuante */
+.btn-wpp-floating {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-wpp-floating:hover {
+    transform: scale(1.1);
+    color: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Efeito de Ondulação (Opcional) */
+.btn-wpp-floating::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #25d366;
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse-wpp 2s infinite;
+}
+
+@keyframes pulse-wpp {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.6); opacity: 0; }
 }
