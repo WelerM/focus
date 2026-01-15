@@ -444,7 +444,7 @@ nav {
         /* align-items: center;
         justify-content: center; */
         padding: 20px 8px;
-      
+
     }
 
     .container-principal>div>h1 {
@@ -494,7 +494,7 @@ nav {
 
 @media(min-width: 390px) {
 
- 
+
     .container-principal {
         display: flex;
         /* align-items: center;
@@ -543,6 +543,7 @@ nav {
     }
 
 }
+
 @media(min-width: 450px) {
 
     .contato-main-container>form {
@@ -649,9 +650,7 @@ nav {
     }
 
     .container-clientes>div,
-    .container-parceiros>div {
-   
-    }
+    .container-parceiros>div {}
 }
 
 @media(min-width: 805px) {
@@ -765,4 +764,51 @@ nav {
         font-size: 17px;
     }
 
+}
+
+.border-main-color {
+    border-color: #198754 !important;
+}
+
+/* --- NOVOS AJUSTES DE SERVIÇOS (UNIFICADOS) --- */
+
+/* Borda superior usando sua cor azul variável */
+.border-main-blue {
+    border-color: var(--main-color) !important;
+}
+
+/* Garante que o botão não estique na largura toda */
+.w-fit {
+    width: fit-content;
+}
+
+/* Efeito suave ao passar o mouse nos cards */
+.transition {
+    transition: all 0.3s ease;
+}
+
+.transition:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Ajuste de Padding interno para os novos cards de texto */
+.container-servicos .card-body {
+    padding: 2rem 1.5rem !important;
+}
+
+/* Corrigindo a cor dos títulos nos cards */
+.container-servicos .card-title {
+    color: var(--main-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Estilização básica do botão para seguir o seu gradiente */
+.container-servicos .btn.bg-main-color {
+    border: none;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
