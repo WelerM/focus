@@ -9,3 +9,7 @@ Na area Clientes, fazer carrosel automatico com apenas os nomes dos edificios e 
 #Remover formulario das paginas de "saiba mais"
 
 #realizar compressão de fotos para diminuir tamanho do site
+
+#add animação focus linhas coloridas na parte inferior do documento
+
+#fazer check de acessibilidade

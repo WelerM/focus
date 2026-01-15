@@ -37,7 +37,56 @@ li {
 }
 
 
-.container-servicos > div > h1 {
+
+
+
+/* ========= CONTAINER PRINCIPAL ========= */
+
+.container-principal {
+    display: flex;
+    /* align-items: center;
+        justify-content: center; */
+    padding: 20px 8px;
+
+
+}
+
+.container-principal>div>h1 {
+
+    font-size: 18px;
+
+}
+
+.container-principal>div>p {
+
+    font-size: 13px;
+    margin-bottom: 17px;
+    text-shadow: 10px 10px 40px rgba(63, 63, 63, 0.384);
+
+}
+
+.container-principal>div>ul>li {
+
+    font-size: 15px;
+
+}
+
+.container-clientes>div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.clientes-container-images>* {
+    width: 70px;
+    height: 110px;
+
+}
+
+
+
+
+.container-servicos>div>h1 {
     font-family: 'Arimo', sans-serif;
     font-family: 'Lora', serif;
     font-family: 'Poppins', sans-serif;
@@ -45,7 +94,8 @@ li {
     font-weight: 400;
 
 }
-.container-sobre > div > div> h1 {
+
+.container-sobre>div>div>h1 {
     font-family: 'Arimo', sans-serif;
     font-family: 'Lora', serif;
     font-family: 'Poppins', sans-serif;
@@ -53,7 +103,8 @@ li {
     font-weight: 400;
 
 }
-.container-clientes > div > div> h1 {
+
+.container-clientes>div>div>h1 {
     font-family: 'Arimo', sans-serif;
     font-family: 'Lora', serif;
     font-family: 'Poppins', sans-serif;
@@ -61,7 +112,8 @@ li {
     font-weight: 400;
 
 }
-.container-parceiros > div > div> h1 {
+
+.container-parceiros>div>div>h1 {
     font-family: 'Arimo', sans-serif;
     font-family: 'Lora', serif;
     font-family: 'Poppins', sans-serif;
@@ -130,27 +182,6 @@ nav {
     font-size: 13px;
 }
 
-
-
-
-
-
-@media(min-width: 300px) {
-    .logo-text {
-        font-size: 17px;
-        font-family: 'Lora', serif;
-        font-family: 'Arimo', sans-serif;
-    }
-
-}
-
-@media(max-width: 992px) {
-    .nav-container {
-        padding: 0px 0px;
-    }
-
-
-}
 
 
 
@@ -405,8 +436,113 @@ nav {
 
 
 
+@media(min-width: 300px) {
 
 
+    .container-principal {
+        display: flex;
+        /* align-items: center;
+        justify-content: center; */
+        padding: 20px 8px;
+      
+    }
+
+    .container-principal>div>h1 {
+
+        font-size: 18px;
+
+    }
+
+    .container-principal>div>p {
+
+        font-size: 13px;
+        margin-bottom: 17px;
+        text-shadow: 10px 10px 40px rgba(63, 63, 63, 0.384);
+
+    }
+
+    .container-principal>div>ul>li {
+
+        font-size: 15px;
+
+    }
+
+    .container-clientes>div {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .clientes-container-images>* {
+        width: 70px;
+        height: 110px;
+
+    }
+
+    .logo-text {
+        font-size: 17px;
+        font-family: 'Lora', serif;
+        font-family: 'Arimo', sans-serif;
+    }
+
+}
+
+
+
+
+
+
+@media(min-width: 390px) {
+
+ 
+    .container-principal {
+        display: flex;
+        /* align-items: center;
+        justify-content: center; */
+        padding: 20px 8px;
+
+
+    }
+
+    .container-principal>div>h1 {
+
+        font-size: 25px;
+
+    }
+
+    .container-principal>div>p {
+
+        font-size: 15px;
+        margin-bottom: 17px;
+        text-shadow: 10px 10px 40px rgba(63, 63, 63, 0.384);
+
+    }
+
+    .container-principal>div>ul>li {
+
+        font-size: 15px;
+
+    }
+
+    .container-clientes>div {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .clientes-container-images>* {
+        width: 70px;
+        height: 110px;
+
+    }
+
+    .logo-text {
+        font-size: 17px;
+        font-family: 'Lora', serif;
+        font-family: 'Arimo', sans-serif;
+    }
+
+}
 @media(min-width: 450px) {
 
     .contato-main-container>form {
@@ -429,7 +565,7 @@ nav {
     .parceiros-bg-screens {
         display: flex;
     }
-    
+
     .parceiros-sm-screens {
         display: none;
     }
@@ -471,7 +607,7 @@ nav {
         font-size: 17px;
     }
 
-   .container-cards-smaller-screens {
+    .container-cards-smaller-screens {
         display: none;
     }
 
@@ -494,12 +630,14 @@ nav {
         border-bottom: 1px solid rgba(0, 0, 0, 0.329);
     }
 }
+
 @media(min-width: 640px) {
 
     .footer-top-grid {
         flex-direction: row;
     }
 }
+
 @media(min-width: 761px) {
     .sobre-textos {
         width: 50%;
@@ -508,6 +646,12 @@ nav {
     .sobre-imagem {
         display: flex;
 
+    }
+
+    .container-clientes>div,
+    .container-parceiros>div {
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -582,8 +726,13 @@ nav {
     .carousel-caption>p {
         font-size: 20px;
     }
-   .img-logo-footer {
+
+    .img-logo-footer {
         width: 70px;
+    }
+
+    .nav-container {
+        padding: 0px 0px;
     }
 
 }
@@ -618,5 +767,3 @@ nav {
     }
 
 }
-
-
