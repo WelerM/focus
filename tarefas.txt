@@ -13,3 +13,6 @@ Na area Clientes, fazer carrosel automatico com apenas os nomes dos edificios e 
 #add animação focus linhas coloridas na parte inferior do documento
 
 #fazer check de acessibilidade
+
+
+#implementar carrousel na area parceiros

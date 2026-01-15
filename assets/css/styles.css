@@ -344,10 +344,10 @@ nav {
 /*   CONTATO   */
 
 .container-contato>.container-xl {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 .contato-section-text {
@@ -650,8 +650,7 @@ nav {
 
     .container-clientes>div,
     .container-parceiros>div {
-        display: flex;
-        align-items: center;
+   
     }
 }
 
