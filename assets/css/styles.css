@@ -1,13 +1,14 @@
 /* ==========================================================================
    1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Lora:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Lora:wght@400;700&family=Poppins:wght@300;400;600;700&family=Bebas+Neue&display=swap');
 
 :root {
     --main-color: #027bb8;
     --main-color-hover: #36ace7;
     --gray-color: #575757;
     --light-bg: #F6F9FE;
+    --dark-footer: #0b0c10;
 }
 
 * {
@@ -20,7 +21,7 @@ body {
     max-width: 1920px;
     min-width: 260px;
     font-size: 16px;
-    font-family: 'Lora', serif; /* Fonte padrão do site */
+    font-family: 'Lora', serif;
     color: var(--gray-color);
 }
 
@@ -37,11 +38,25 @@ li { list-style: none; }
 .custom-gray-color { color: var(--gray-color); }
 .w-fit { width: fit-content; }
 
-/* Efeito de elevação para cards */
 .transition { transition: all 0.3s ease; }
 .transition:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Animações */
+.floating-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes float-sobre {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
 }
 
 /* ==========================================================================
@@ -63,7 +78,28 @@ nav {
 .img-logo { width: 100%; height: 100%; }
 
 /* ==========================================================================
-   4. CARROSSEL PRINCIPAL
+   4. SEÇÃO PRINCIPAL (MAIN SECTION)
+   ========================================================================== */
+.main-title {
+    font-family: 'Bebas Neue', sans-serif !important;
+    letter-spacing: 2px;
+}
+
+/* Decoração sutil atrás da imagem principal */
+.bg-circle-decoration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   5. CARROSSEL PRINCIPAL
    ========================================================================== */
 #carousel-inner-principal .carousel-item { height: 300px; background-color: #000; }
 
@@ -90,7 +126,7 @@ nav {
 .carousel-caption h1 { font-size: 8vw; word-break: keep-all; color: #fff; }
 
 /* ==========================================================================
-   5. SEÇÃO DE SERVIÇOS (CARDS ATUALIZADOS)
+   6. SEÇÃO DE SERVIÇOS
    ========================================================================== */
 .container-servicos .card {
     border-top: 4px solid var(--main-color) !important;
@@ -114,137 +150,33 @@ nav {
 }
 
 /* ==========================================================================
-   6. SEÇÃO SOBRE / CLIENTES / CONTATO
+   7. SEÇÃO PARCEIROS (MANTIDA ORIGINAL)
    ========================================================================== */
-.sobre-imagem { display: none; } /* Escondido no mobile */
-
-.clientes-container-images img { width: 70px; height: 110px; }
-
-.contato-main-container form {
-    width: 100%;
-    max-width: 450px;
-    padding: 2rem 1rem;
-}
-
-/* ==========================================================================
-   7. RODAPÉ E BOTÕES FIXOS
-   ========================================================================== */
-.footer-top-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.btn-wpp {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    z-index: 999;
-}
-
-.img-logo-footer { width: 50px; margin-left: 15px; }
-
-/* ==========================================================================
-   8. MEDIA QUERIES (RESPONSIVIDADE)
-   ========================================================================== */
-
-/* Dispositivos Pequenos (Mobile) */
-@media(min-width: 500px) {
-    .logo-text { font-size: 20px; }
-    #carousel-inner-principal .carousel-item { height: 450px; }
-}
-
-/* Tablets */
-@media(min-width: 761px) {
-    .sobre-textos { width: 50%; }
-    .sobre-imagem { display: flex; }
-}
-
-/* Desktops Médios */
-@media(min-width: 992px) {
-    .carousel-caption h1 { font-size: 5rem; }
-    .footer-top-grid { flex-direction: row; justify-content: space-between; }
-}
-
-/* Telas Grandes */
-@media(min-width: 1100px) {
-    #carousel-inner-principal h1 { font-size: 50px; }
-    #carousel-inner-principal p { font-size: 17px; }
-}
-
-/* Animação extra para elementos flutuantes (opcional) */
-.floating-animation {
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-
-
-
-
-
-/* SECTION SOBRE */
-
-/* Efeito de flutuar suave na imagem do Sobre */
-.floating-animation {
-    animation: float-sobre 6s ease-in-out infinite;
-}
-
-@keyframes float-sobre {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-}
-
-/* Garante que o texto se adapte bem no mobile */
-@media (max-width: 991px) {
-    .container-sobre {
-        text-align: center;
-    }
-    .container-sobre .row.g-3 div {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-
-
-/* --- SEÇÃO PARCEIROS --- */
-
-/* Estilização das logos dos parceiros */
 .img-partner {
     max-width: 140px;
     max-height: 80px;
     object-fit: contain;
-    filter: grayscale(100%); /* Deixa as logos cinzas para um visual limpo */
+    filter: grayscale(100%);
     opacity: 0.6;
     transition: all 0.4s ease;
     cursor: pointer;
 }
 
 .img-partner:hover {
-    filter: grayscale(0%); /* Ganha cor ao passar o mouse */
+    filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.1);
 }
 
-/* Ajuste dos controles do carrossel para não ficarem em cima das logos */
 #carouselParceiros .carousel-control-prev,
 #carouselParceiros .carousel-control-next {
     width: 5%;
 }
 
-/* No mobile as logos ficam um pouco menores */
-@media (max-width: 576px) {
-    .img-partner {
-        max-width: 100px;
-        max-height: 60px;
-    }
-}
-
-/* --- SEÇÃO CLIENTES --- */
+/* ==========================================================================
+   8. SEÇÃO CLIENTES
+   ========================================================================== */
+.clientes-container-images img { width: 70px; height: 110px; }
 
 .cliente-card {
     background-color: #fff;
@@ -260,7 +192,6 @@ nav {
     max-height: 80px;
     width: auto;
     object-fit: contain;
-    /* Removemos o grayscale aqui para dar vida aos logos dos clientes */
 }
 
 .cliente-card:hover {
@@ -268,37 +199,24 @@ nav {
     background-color: var(--light-bg);
 }
 
-/* Ajuste de responsividade para o texto lateral */
-@media (max-width: 991px) {
-    .container-clientes {
-        text-align: center;
-    }
-    .container-clientes .d-flex {
-        justify-content: center;
-    }
+/* ==========================================================================
+   9. SEÇÃO CONTATO
+   ========================================================================== */
+.contato-main-container form {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem 1rem;
 }
 
+.container-contato { overflow: hidden; }
 
-
-/* Container Contato */
-.container-contato {
-    overflow: hidden;
-}
-
-/* Card de Contato */
 .contact-box {
     background-color: #ffffff;
     transition: transform 0.3s ease;
 }
 
-.contact-box:hover {
-    transform: scale(1.02);
-}
+.contact-box:hover { transform: scale(1.02); }
 
-
-
-
-/* Botão WhatsApp Premium */
 .btn-whatsapp-premium {
     padding: 18px 30px;
     border-radius: 50px;
@@ -311,32 +229,23 @@ nav {
 .btn-whatsapp-premium:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(var(--bs-primary-rgb), 0.4);
-    background-color: #25d366; /* Cor oficial do WhatsApp no hover */
+    background-color: #25d366;
 }
 
-/* Ícones de Contato */
 .icon-circle {
-    width: 45px;
-    height: 45px;
+    width: 45px; height: 45px;
     background-color: rgba(var(--bs-primary-rgb), 0.1);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     font-size: 1.2rem;
     flex-shrink: 0;
 }
 
-/* Redes Sociais */
 .social-icon {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 45px; height: 45px;
+    display: flex; align-items: center; justify-content: center;
     border-radius: 50%;
     background: #f8f9fa;
-    /* color: #333; */
     text-decoration: none;
     font-size: 1.3rem;
     transition: all 0.3s ease;
@@ -348,8 +257,17 @@ nav {
     transform: rotate(10deg);
 }
 
+/* ==========================================================================
+   10. RODAPÉ E WHATSAPP FLUTUANTE
+   ========================================================================== */
+.footer-premium { background-color: var(--dark-footer) !important; }
 
-/* Botão WhatsApp Flutuante */
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { transition: all 0.3s ease; font-size: 0.9rem; }
+.footer-links a:hover { color: var(--main-color) !important; padding-left: 5px; }
+
+.img-logo-footer { width: 50px; margin-left: 15px; }
+
 .btn-wpp-floating {
     position: fixed;
     bottom: 30px;
@@ -366,7 +284,6 @@ nav {
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     z-index: 1000;
     transition: all 0.3s ease;
-    text-decoration: none;
 }
 
 .btn-wpp-floating:hover {
@@ -375,12 +292,10 @@ nav {
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
-/* Efeito de Ondulação (Opcional) */
 .btn-wpp-floating::before {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     background-color: #25d366;
     border-radius: 50%;
     z-index: -1;
@@ -390,4 +305,38 @@ nav {
 @keyframes pulse-wpp {
     0% { transform: scale(1); opacity: 0.6; }
     100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* ==========================================================================
+   11. MEDIA QUERIES (RESPONSIVIDADE)
+   ========================================================================== */
+
+@media(max-width: 576px) {
+    .img-partner { max-width: 100px; max-height: 60px; }
+}
+
+@media(min-width: 500px) {
+    .logo-text { font-size: 20px; }
+    #carousel-inner-principal .carousel-item { height: 450px; }
+}
+
+@media(min-width: 761px) {
+    .sobre-textos { width: 50%; }
+    .sobre-imagem { display: flex; }
+}
+
+@media(max-width: 991px) {
+    .container-sobre, .container-clientes { text-align: center; }
+    .container-sobre .row.g-3 div, .container-clientes .d-flex { justify-content: center; }
+    .main-title { font-size: 2.5rem; }
+    .container-principal { text-align: center; }
+}
+
+@media(min-width: 992px) {
+    .carousel-caption h1 { font-size: 5rem; }
+}
+
+@media(min-width: 1100px) {
+    #carousel-inner-principal h1 { font-size: 50px; }
+    #carousel-inner-principal p { font-size: 17px; }
 }
