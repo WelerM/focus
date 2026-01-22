@@ -19,10 +19,11 @@
 
 body {
     max-width: 1920px;
-    min-width: 260px;
+    min-width: 260px; /* Suporte para telas muito pequenas */
     font-size: 16px;
     font-family: 'Lora', serif;
     color: var(--gray-color);
+    overflow-x: hidden;
 }
 
 /* Tipografia e Resets */
@@ -32,7 +33,7 @@ a { text-decoration: none; transition: 0.3s; }
 li { list-style: none; }
 
 /* ==========================================================================
-   2. CLASSES UTILITÁRIAS (REUTILIZÁVEIS)
+   2. CLASSES UTILITÁRIAS
    ========================================================================== */
 .bg-main-color { background: linear-gradient(90deg, var(--main-color), #42afe6); }
 .custom-gray-color { color: var(--gray-color); }
@@ -45,112 +46,49 @@ li { list-style: none; }
 }
 
 /* Animações */
-.floating-animation {
-    animation: float 6s ease-in-out infinite;
-}
+.floating-animation { animation: float 6s ease-in-out infinite; }
 
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
 }
 
-@keyframes float-sobre {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-}
-
 /* ==========================================================================
-   3. NAVEGAÇÃO (HEADER)
+   3. NAVEGAÇÃO E HEADER
    ========================================================================== */
-nav {
-    transition: background-color 0.3s ease;
-    height: 70px;
-}
-
+nav { transition: background-color 0.3s ease; height: 70px; }
 .navbar .nav-item.dropdown:hover .dropdown-menu { display: block; }
-
-.logo-text {
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-}
-
+.logo-text { font-size: 15px; font-family: 'Poppins', sans-serif; font-weight: 600; }
 .img-logo { width: 100%; height: 100%; }
 
 /* ==========================================================================
-   4. SEÇÃO PRINCIPAL (MAIN SECTION)
+   4. SEÇÃO PRINCIPAL (HERO)
    ========================================================================== */
-.main-title {
-    font-family: 'Bebas Neue', sans-serif !important;
-    letter-spacing: 2px;
-}
+.main-title { font-family: 'Bebas Neue', sans-serif !important; letter-spacing: 2px; }
 
-/* Decoração sutil atrás da imagem principal */
 .bg-circle-decoration {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
+    width: 80%; height: 80%;
     background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
     border-radius: 50%;
     z-index: 1;
 }
 
 /* ==========================================================================
-   5. CARROSSEL PRINCIPAL
+   5. SEÇÃO DE SERVIÇOS
    ========================================================================== */
-#carousel-inner-principal .carousel-item { height: 300px; background-color: #000; }
-
-.img-principal-1, .img-principal-2, .img-principal-3 {
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.5);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.img-principal-1 { background-image: url("../images/porteiro.jpg"); }
-.img-principal-2 { background-image: url("../images/recepcionista.jpg"); }
-.img-principal-3 { background-image: url("../images/zelador.jpg"); }
-
-.carousel-caption {
-    left: 50%;
-    top: 56%;
-    transform: translate(-50%, -50%);
-}
-
-.carousel-caption h1 { font-size: 8vw; word-break: keep-all; color: #fff; }
-
-/* ==========================================================================
-   6. SEÇÃO DE SERVIÇOS
-   ========================================================================== */
-.container-servicos .card {
-    border-top: 4px solid var(--main-color) !important;
-}
-
-.container-servicos .card-body {
-    padding: 2rem 1.5rem !important;
-}
-
-.container-servicos .card-title {
-    color: var(--main-color);
-    margin-bottom: 15px;
-}
-
+.container-servicos .card { border-top: 4px solid var(--main-color) !important; }
+.container-servicos .card-body { padding: 2rem 1.5rem !important; }
+.container-servicos .card-title { color: var(--main-color); margin-bottom: 15px; }
 .container-servicos .btn.bg-main-color {
-    border: none;
-    padding: 8px 20px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1px;
+    border: none; padding: 8px 20px;
+    font-size: 13px; font-weight: 600; letter-spacing: 1px;
 }
 
 /* ==========================================================================
-   7. SEÇÃO PARCEIROS (MANTIDA ORIGINAL)
+   6. SEÇÃO PARCEIROS E CLIENTES (ESTILO CARROSSEL)
    ========================================================================== */
 .img-partner {
     max-width: 140px;
@@ -168,77 +106,58 @@ nav {
     transform: scale(1.1);
 }
 
+/* Wrapper para Clientes com Nome */
+.cliente-item-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+}
+
+.cliente-name-hover {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: var(--main-color);
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.cliente-item-wrapper:hover .cliente-name-hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ajuste Controles Carrossel */
 #carouselParceiros .carousel-control-prev,
-#carouselParceiros .carousel-control-next {
+#carouselParceiros .carousel-control-next,
+#carouselClientes .carousel-control-prev,
+#carouselClientes .carousel-control-next {
     width: 5%;
 }
 
 /* ==========================================================================
-   8. SEÇÃO CLIENTES
+   7. SEÇÃO CONTATO
    ========================================================================== */
-.clientes-container-images img { width: 70px; height: 110px; }
-
-.cliente-card {
-    background-color: #fff;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #eee !important;
-}
-
-.cliente-card img {
-    max-height: 80px;
-    width: auto;
-    object-fit: contain;
-}
-
-.cliente-card:hover {
-    border-color: var(--main-color) !important;
-    background-color: var(--light-bg);
-}
-
-/* ==========================================================================
-   9. SEÇÃO CONTATO
-   ========================================================================== */
-.contato-main-container form {
-    width: 100%;
-    max-width: 450px;
-    padding: 2rem 1rem;
-}
-
-.container-contato { overflow: hidden; }
-
-.contact-box {
-    background-color: #ffffff;
-    transition: transform 0.3s ease;
-}
-
+.contact-box { background-color: #ffffff; transition: transform 0.3s ease; }
 .contact-box:hover { transform: scale(1.02); }
 
 .btn-whatsapp-premium {
     padding: 18px 30px;
     border-radius: 50px;
     font-size: 1.1rem;
-    box-shadow: 0 4px 15px rgba(var(--bs-primary-rgb), 0.3);
     transition: all 0.3s ease;
     border: none;
 }
 
 .btn-whatsapp-premium:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(var(--bs-primary-rgb), 0.4);
     background-color: #25d366;
-}
-
-.icon-circle {
-    width: 45px; height: 45px;
-    background-color: rgba(var(--bs-primary-rgb), 0.1);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.2rem;
-    flex-shrink: 0;
 }
 
 .social-icon {
@@ -246,8 +165,6 @@ nav {
     display: flex; align-items: center; justify-content: center;
     border-radius: 50%;
     background: #f8f9fa;
-    text-decoration: none;
-    font-size: 1.3rem;
     transition: all 0.3s ease;
 }
 
@@ -258,38 +175,22 @@ nav {
 }
 
 /* ==========================================================================
-   10. RODAPÉ E WHATSAPP FLUTUANTE
+   8. RODAPÉ E WHATSAPP FLUTUANTE
    ========================================================================== */
 .footer-premium { background-color: var(--dark-footer) !important; }
-
-.footer-links li { margin-bottom: 10px; }
-.footer-links a { transition: all 0.3s ease; font-size: 0.9rem; }
 .footer-links a:hover { color: var(--main-color) !important; padding-left: 5px; }
-
-.img-logo-footer { width: 50px; margin-left: 15px; }
 
 .btn-wpp-floating {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
+    bottom: 20px; right: 20px;
+    width: 55px; height: 55px;
     background-color: #25d366;
     color: white;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
     z-index: 1000;
     transition: all 0.3s ease;
-}
-
-.btn-wpp-floating:hover {
-    transform: scale(1.1);
-    color: white;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 .btn-wpp-floating::before {
@@ -308,35 +209,46 @@ nav {
 }
 
 /* ==========================================================================
-   11. MEDIA QUERIES (RESPONSIVIDADE)
+   9. MEDIA QUERIES (RESPONSIVIDADE)
    ========================================================================== */
 
-@media(max-width: 576px) {
+/* Ajustes para telas MUITO pequenas (300px) */
+@media (max-width: 350px) {
+    .main-title { font-size: 1.8rem !important; }
+    .img-partner { max-width: 80px; }
+    .cliente-item-wrapper { min-width: 90px; }
+    .cliente-name-hover { font-size: 0.7rem; }
+    .display-6 { font-size: 1.5rem; }
+    .carousel-item .gap-4 { gap: 1rem !important; }
+}
+
+/* Smartphones pequenos e médios */
+@media (max-width: 576px) {
     .img-partner { max-width: 100px; max-height: 60px; }
+    .container-principal { padding-top: 2rem !important; }
+    .btn-wpp-floating { width: 50px; height: 50px; bottom: 15px; right: 15px; }
 }
 
-@media(min-width: 500px) {
-    .logo-text { font-size: 20px; }
-    #carousel-inner-principal .carousel-item { height: 450px; }
-}
-
-@media(min-width: 761px) {
-    .sobre-textos { width: 50%; }
-    .sobre-imagem { display: flex; }
-}
-
-@media(max-width: 991px) {
+/* Tablets e Mobile Landscape */
+@media (max-width: 991px) {
     .container-sobre, .container-clientes { text-align: center; }
-    .container-sobre .row.g-3 div, .container-clientes .d-flex { justify-content: center; }
-    .main-title { font-size: 2.5rem; }
-    .container-principal { text-align: center; }
+    .container-sobre .row.g-3 div, 
+    .container-clientes .d-flex { justify-content: center !important; }
+    .main-title { font-size: 2.2rem; }
+    .container-principal .text-lg-start { text-align: center !important; }
+    
+    /* Garante que o carrossel de clientes não quebre em telas menores */
+    .carousel-item .d-flex {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
 }
 
-@media(min-width: 992px) {
-    .carousel-caption h1 { font-size: 5rem; }
+/* Ajustes de Desktop */
+@media (min-width: 768px) {
+    .logo-text { font-size: 18px; }
 }
 
-@media(min-width: 1100px) {
-    #carousel-inner-principal h1 { font-size: 50px; }
-    #carousel-inner-principal p { font-size: 17px; }
+@media (min-width: 992px) {
+    .main-title { font-size: 3.5rem; }
 }

@@ -1,18 +1,14 @@
-#Fazer responsividade das areas CLIENTES e PARCEIROS
-
-Na area Clientes, fazer carrosel automatico com apenas os nomes dos edificios e possivelmente seus endereços abaixo
-
-# Encaixar textos dnetro do carousel principal (index.html)
-
-#Fazer carrossel de clientes na área clientes
-
-#Remover formulario das paginas de "saiba mais"
-
-#realizar compressão de fotos para diminuir tamanho do site
-
-#add animação focus linhas coloridas na parte inferior do documento
-
-#fazer check de acessibilidade
+fazer footer e adicionar links corretos
 
 
-#implementar carrousel na area parceiros
+
+
+
+=======================================================
+                Perguntar ao pai
+=======================================================
+
+
+# Se ele quer CNPJ aparecendo no rodapé
+
+# Adicionar mostragem de página no topo da página, antes do header, ex: "Home > serviços > portaria"
