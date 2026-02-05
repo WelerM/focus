@@ -1,9 +1,3 @@
-fazer footer e adicionar links corretos
-
-
-
-
-
 =======================================================
                 Perguntar ao pai
 =======================================================
@@ -12,3 +6,15 @@ fazer footer e adicionar links corretos
 # Se ele quer CNPJ aparecendo no rodapé
 
 # Adicionar mostragem de página no topo da página, antes do header, ex: "Home > serviços > portaria"
+
+
+
+
+
+
+# TAREFAS
+#1 Fazer um exemplo com  o site todo branco
+#2 Fazer página de Dúvidas
+
+# PÁGINA EMPREZA 0%
+# PÁGINA TODOS-SERVIÇOS 100%

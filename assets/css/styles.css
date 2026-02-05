@@ -133,6 +133,9 @@ nav { transition: background-color 0.3s ease; height: 70px; }
     transform: translateY(0);
 }
 
+
+
+
 /* Ajuste Controles Carrossel */
 #carouselParceiros .carousel-control-prev,
 #carouselParceiros .carousel-control-next,
