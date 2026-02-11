@@ -180,7 +180,7 @@ nav { transition: background-color 0.3s ease; height: 70px; }
 /* ==========================================================================
    8. RODAPÉ E WHATSAPP FLUTUANTE
    ========================================================================== */
-.footer-premium { background-color: var(--dark-footer) !important; }
+
 .footer-links a:hover { color: var(--main-color) !important; padding-left: 5px; }
 
 .btn-wpp-floating {
