@@ -18,3 +18,13 @@
 
 # PÁGINA EMPREZA 0%
 # PÁGINA TODOS-SERVIÇOS 100%
+
+
+
+
+2X COISAS IMPORTANTES
+
+#remover logo direito da hero section quando a tela quebrar
+
+# fazer página "trabalhe conosco" e incluir pdf loader
+# perguntar pai quais redes sociais a mais devo adicionar
