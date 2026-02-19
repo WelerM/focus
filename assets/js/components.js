@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
                     <ul class="navbar-nav text-center fw-semibold align-items-center">
                         <li class="nav-item"><a class="nav-link px-3" href="./index.html"><i class="bi bi-house-door fs-6"></i>HOME</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="/servicos/todos-servicos.html">SERVIÇOS</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="./servicos/todos-servicos.html">SERVIÇOS</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="/focus/empresa.html">EMPRESA</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="/focus/trabalhe-conosco.html">TRABALHE CONOSCO</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="/focus/contato.html">CONTATO</a></li>
