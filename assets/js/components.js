@@ -26,9 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     <ul class="navbar-nav text-center fw-semibold align-items-center">
                         <li class="nav-item"><a class="nav-link px-3" href="./index.html"><i class="bi bi-house-door fs-6"></i>HOME</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="./servicos/todos-servicos.html">SERVIÇOS</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="/focus/empresa.html">EMPRESA</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="/focus/trabalhe-conosco.html">TRABALHE CONOSCO</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="/focus/contato.html">CONTATO</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="./focus/empresa.html">EMPRESA</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="./focus/trabalhe-conosco.html">TRABALHE CONOSCO</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="./focus/contato.html">CONTATO</a></li>
                        
                     </ul>
                 </div>
@@ -166,19 +166,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="col-6 col-lg-2 offset-lg-1" style="width: 150px;">
                         <h6 class="fw-bold mb-3 text-white">Navegação</h6>
                         <ul class="list-unstyled footer-links">
-                            <li><a href="/index.html" class="text-white text-decoration-none">Início</a></li>
-                            <li><a href="/focus/empresa.html" class="text-white text-decoration-none">Empresa</a></li>
-                            <li><a href="/servicos/todos-servicos.html" class="text-white text-decoration-none">Serviços</a></li>
-                            <li><a href="/focus/contato.html" class="text-white text-decoration-none">Contato</a></li>
+                            <li><a href="./index.html" class="text-white text-decoration-none">Início</a></li>
+                            <li><a href="./focus/empresa.html" class="text-white text-decoration-none">Empresa</a></li>
+                            <li><a href="./servicos/todos-servicos.html" class="text-white text-decoration-none">Serviços</a></li>
+                            <li><a href="./focus/contato.html" class="text-white text-decoration-none">Contato</a></li>
                         </ul>
                     </div>
 
                     <div class="col-6 col-lg-2" style="width: 150px;">
                         <h6 class="fw-bold mb-3">Suporte</h6>
                         <ul class="list-unstyled footer-links">
-                            <li><a href="/focus/duvidas.html" class="text-light text-decoration-none">Dúvidas</a></li>
-                            <li><a href="/focus/privacidade.html" class="text-light text-decoration-none">Privacidade</a></li>
-                            <li><a href="/focus/termos.html" class="text-light text-decoration-none">Termos</a></li>
+                            <li><a href="./focus/duvidas.html" class="text-light text-decoration-none">Dúvidas</a></li>
+                            <li><a href="./focus/privacidade.html" class="text-light text-decoration-none">Privacidade</a></li>
+                            <li><a href="./focus/termos.html" class="text-light text-decoration-none">Termos</a></li>
                         </ul>
                     </div>
 
