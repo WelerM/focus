@@ -3,28 +3,10 @@
 =======================================================
 
 
-# Se ele quer CNPJ aparecendo no rodapé
 
 # Adicionar mostragem de página no topo da página, antes do header, ex: "Home > serviços > portaria"
 
-
-
-
-
-
-# TAREFAS
-#1 Fazer um exemplo com  o site todo branco
-#2 Fazer página de Dúvidas
-
-# PÁGINA EMPREZA 0%
-# PÁGINA TODOS-SERVIÇOS 100%
-
-
-
-
-2X COISAS IMPORTANTES
-
 #remover logo direito da hero section quando a tela quebrar
 
-# fazer página "trabalhe conosco" e incluir pdf loader
 # perguntar pai quais redes sociais a mais devo adicionar
+# Se ele quer CNPJ aparecendo no rodapé

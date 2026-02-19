@@ -245,6 +245,12 @@ nav { transition: background-color 0.3s ease; height: 70px; }
         padding-left: 10px !important;
         padding-right: 10px !important;
     }
+
+    .hero-section-main-img{
+        display: none;
+    }
+
+
 }
 
 /* Ajustes de Desktop */

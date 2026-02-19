@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <hr class="my-4 opacity-10">
                 <div class="text-center">
-                    <p class="mb-0 text-white opacity-50" style="font-size: 0.85rem;">&copy; 2026 Focus Service. Todos os direitos reservados.</p>
+                    <p class="mb-0 text-white opacity-50" style="font-size: 0.85rem;">&copy; 2022 Focus Service | Portaria e Limpeza</p>
                 </div>
             </div>
         </footer>
