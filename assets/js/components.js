@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <nav class="navbar navbar-expand-lg fixed-top border-bottom bg-white py-2 shadow-sm" style="height: 80px;">
             <div class="container bg-white">
                 <a class="navbar-brand d-flex align-items-center gap-2" href="/index.html">
-                    <img src="./assets/images/logo.png" class="img-logo" alt="Focus Service" style="height: 50px;">
+                    <img src="/assets/images/logo.png" class="img-logo" alt="Focus Service" style="height: 50px;">
                     <div class="d-flex flex-column justify-content-center">
                         <span class="logo-text fw-bold lh-1" style="font-family: 'Bebas Neue'; font-size: 1.5rem; letter-spacing: 1px;">FOCUS SERVICE</span>
                         <span class="text-muted" style="font-size: 10px; text-transform: uppercase;">Nosso foco é você.</span>
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="row gy-4 d-flex justify-content-center">
                     <div class="col-lg-4 text-center text-lg-start">
                         <a class="d-flex align-items-center justify-content-center justify-content-lg-start text-decoration-none mb-3" href="/index.html">
-                            <img src="./assets/images/logo.png" alt="Logo" style="height: 40px;" class="me-2">
+                            <img src="/assets/images/logo.png" alt="Logo" style="height: 40px;" class="me-2">
                             <h4 class="logo-text m-0 text-white fw-bold" style="letter-spacing: 1px;">FOCUS SERVICE</h4>
                         </a>
                         <p class="small pe-lg-4">Soluções inteligentes em serviços e gestão para condomínios e empresas. Excelência, confiança e resultados tangíveis.</p>
