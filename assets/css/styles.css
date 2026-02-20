@@ -238,7 +238,18 @@ nav { transition: background-color 0.3s ease; height: 70px; }
     .container-sobre .row.g-3 div, 
     .container-clientes .d-flex { justify-content: center !important; }
     .main-title { font-size: 2.2rem; }
-    .container-principal .text-lg-start { text-align: center !important; }
+    
+    .container-principal > div > .container-principal-left{
+          text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container-principal-left > div > a{
+        width: 80%;
+        margin: auto;
+      }
     
     /* Garante que o carrossel de clientes não quebre em telas menores */
     .carousel-item .d-flex {
