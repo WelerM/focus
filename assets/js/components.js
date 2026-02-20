@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="row gy-4 d-flex justify-content-center">
                     <div class="col-lg-4 text-center text-lg-start">
                         <a class="d-flex align-items-center justify-content-center justify-content-lg-start text-decoration-none mb-3" href="/focus/">
-                            <img src="/assets/images/logo.png" alt="Logo" style="height: 40px;" class="me-2">
+                            <img src="./assets/images/logo.png" alt="Logo" style="height: 40px;" class="me-2">
                             <h4 class="logo-text m-0 text-white fw-bold" style="letter-spacing: 1px;">FOCUS SERVICE</h4>
                         </a>
                         <p class="small pe-lg-4">Soluções inteligentes em serviços e gestão para condomínios e empresas. Excelência, confiança e resultados tangíveis.</p>
