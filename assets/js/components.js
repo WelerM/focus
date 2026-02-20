@@ -189,8 +189,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <div class="row gy-4 d-flex justify-content-center">
 
+
                     <div class="col-lg-4 text-center text-lg-start">
-                        <a class="d-flex align-items-center justify-content-center justify-content-lg-start text-decoration-none mb-3" href="/focus/">
+                        <a class="d-flex align-items-center justify-content-center justify-content-lg-start text-decoration-none mb-3" href="/focus">
                             <img src="./assets/images/logo.png" alt="Logo" style="height: 40px;" class="me-2">
                             <h4 class="logo-text m-0 text-white fw-bold" style="letter-spacing: 1px;">FOCUS SERVICE</h4>
                         </a>
@@ -201,10 +202,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="col-6 col-lg-2 offset-lg-1" style="width: 150px;">
                         <h6 class="fw-bold mb-3 text-white">Navegação</h6>
                         <ul class="list-unstyled footer-links">
-                            <li><a href="./focus" class="text-white text-decoration-none">Início</a></li>
-                            <li><a href="./focus/empresa.html" class="text-white text-decoration-none">Empresa</a></li>
-                            <li><a href="./servicos/todos-servicos.html" class="text-white text-decoration-none">Serviços</a></li>
-                            <li><a href="./focus/contato.html" class="text-white text-decoration-none">Contato</a></li>
+                            <li><a href="/focus" class="text-white text-decoration-none">Início</a></li>
+                            <li><a href="/focus/focus/empresa.html" class="text-white text-decoration-none">Empresa</a></li>
+                            <li><a href="/focus/focus/servicos/todos-servicos.html" class="text-white text-decoration-none">Serviços</a></li>
+                            <li><a href="/focus/focus/contato.html" class="text-white text-decoration-none">Contato</a></li>
                         </ul>
                     </div>
 
