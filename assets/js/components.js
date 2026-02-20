@@ -267,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="col-6 col-lg-2 offset-lg-1" style="width: 150px;">
                         <h6 class="fw-bold mb-3 text-white">Navegação</h6>
                         <ul class="list-unstyled footer-links">
-                            <li><a href="./focus" class="text-white text-decoration-none">Início</a></li>
+                            <li><a href="/focus" class="text-white text-decoration-none">Início</a></li>
                             <li><a href="./empresa.html" class="text-white text-decoration-none">Empresa</a></li>
                             <li><a href="./servicos/todos-servicos.html" class="text-white text-decoration-none">Serviços</a></li>
                             <li><a href="./focus/contato.html" class="text-white text-decoration-none">Contato</a></li>
