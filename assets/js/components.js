@@ -2,13 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    // --- 1. IMPLEMENTAÇÃO DO HEADER ---
+    // --- 1. IMPLEMENTAÇÃO DO HEADER DO INDEX.HTML---
     const headerElement = document.querySelector("#header-placeholder");
     if (headerElement) {
         headerElement.innerHTML = `
         <nav class="navbar navbar-expand-lg fixed-top border-bottom bg-white py-2 shadow-sm" style="height: 80px;">
             <div class="container bg-white">
-                <a class="navbar-brand d-flex align-items-center gap-2" href="/index.html">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="/focus.html">
                     <img src="./assets/images/logo.png" class="img-logo" alt="Focus Service" style="height: 50px;">
                     <div class="d-flex flex-column justify-content-center">
                         <span class="logo-text fw-bold lh-1" style="font-family: 'Bebas Neue'; font-size: 1.5rem; letter-spacing: 1px;">FOCUS SERVICE</span>
@@ -36,6 +36,45 @@ document.addEventListener("DOMContentLoaded", function () {
         </nav>
         `;
     }
+
+    
+    // --- 1. IMPLEMENTAÇÃO DO HEADER DO GERAL DO SITE---
+    const headerElementeGeneral = document.querySelector("#header-general-placeholder");
+    if (headerElementeGeneral) {
+        headerElementeGeneral.innerHTML = `
+        <nav class="navbar navbar-expand-lg fixed-top border-bottom bg-white py-2 shadow-sm" style="height: 80px;">
+            <div class="container bg-white">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="/focus">
+                    <img src="../assets/images/logo.png" class="img-logo" alt="Focus Service" style="height: 50px;">
+                    <div class="d-flex flex-column justify-content-center">
+                        <span class="logo-text fw-bold lh-1" style="font-family: 'Bebas Neue'; font-size: 1.5rem; letter-spacing: 1px;">FOCUS SERVICE</span>
+                        <span class="text-muted" style="font-size: 10px; text-transform: uppercase;">Nosso foco é você.</span>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </button>
+
+                <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav text-center fw-semibold align-items-center">
+                        <li class="nav-item"><a class="nav-link px-3" href="./index.html"><i class="bi bi-house-door fs-6"></i>HOME</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="./servicos/todos-servicos.html">SERVIÇOS</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="./focus/empresa.html">EMPRESA</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="./focus/trabalhe-conosco.html">TRABALHE CONOSCO</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="./focus/contato.html">CONTATO</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        `;
+    }
+
+
+
 
 
     // --- 3. SEÇÃO DE CONTATO REUTILIZÁVEL ---
