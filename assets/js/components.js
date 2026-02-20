@@ -277,8 +277,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         <ul class="list-unstyled footer-links">
                             <li><a href="/focus" class="text-white text-decoration-none">Início</a></li>
                             <li><a href="/focus/focus/empresa.html" class="text-white text-decoration-none">Empresa</a></li>
-                            <li><a href="./servicos/todos-servicos.html" class="text-white text-decoration-none">Serviços</a></li>
-                            <li><a href="./focus/contato.html" class="text-white text-decoration-none">Contato</a></li>
+                            <li><a href="/focus/focus/servicos/todos-servicos.html" class="text-white text-decoration-none">Serviços</a></li>
+                            <li><a href="/focus/focus/contato.html" class="text-white text-decoration-none">Contato</a></li>
                         </ul>
                     </div>
 
@@ -288,9 +288,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="col-6 col-lg-2" style="width: 150px;">
                         <h6 class="fw-bold mb-3">Suporte</h6>
                         <ul class="list-unstyled footer-links">
-                            <li><a href="./focus/duvidas.html" class="text-light text-decoration-none">Dúvidas</a></li>
-                            <li><a href="./focus/privacidade.html" class="text-light text-decoration-none">Privacidade</a></li>
-                            <li><a href="./focus/termos.html" class="text-light text-decoration-none">Termos</a></li>
+                            <li><a href="/focus/focus/duvidas.html" class="text-light text-decoration-none">Dúvidas</a></li>
+                            <li><a href="/focus/focus/privacidade.html" class="text-light text-decoration-none">Privacidade</a></li>
+                            <li><a href="/focus/focus/termos.html" class="text-light text-decoration-none">Termos</a></li>
                         </ul>
                     </div>
 
