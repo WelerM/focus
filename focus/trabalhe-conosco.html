@@ -13,7 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="position-relative">
@@ -28,22 +29,27 @@
                     <div class="text-center mb-5">
                         <span class="badge bg-primary mb-2">OPORTUNIDADES</span>
                         <h2 class="fw-bold">Faça parte da nossa equipe</h2>
-                        <p class="text-secondary">Preencha seus dados abaixo. Valorizamos profissionais comprometidos.</p>
+                        <p class="text-secondary">Preencha seus dados abaixo. Valorizamos profissionais comprometidos.
+                        </p>
                     </div>
 
                     <div class="card border-0 shadow-sm p-4 p-md-5">
-                        
-                        <form action="https://formspree.io/f/mlgwjbag" method="POST">
-                            
+
+                        <!-- Hidden -->
+                        <form action="https://formspree.io/f/mlgwjbag" method="POST" class="d-none">
+
                             <div class="row g-3">
                                 <div class="col-md-6">
+
                                     <label class="form-label fw-bold small text-uppercase">Nome Completo</label>
-                                    <input type="text" name="nome" class="form-control form-control-lg" placeholder="Nome completo" required>
+                                    <input type="text" name="nome" class="form-control form-control-lg"
+                                        placeholder="Nome completo" required>
                                 </div>
 
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold small text-uppercase">WhatsApp / Telefone</label>
-                                    <input id="whatsapp" type="tel"  name="telefone" class="form-control form-control-lg" placeholder="WhatsApp / Telefone" required>
+                                    <input id="whatsapp" type="tel" name="telefone" class="form-control form-control-lg"
+                                        placeholder="WhatsApp / Telefone" required>
                                 </div>
 
                                 <div class="col-md-12">
@@ -59,15 +65,16 @@
 
                                 <div class="col-md-12">
                                     <label class="form-label fw-bold small text-uppercase">Mensagem (Opcional)</label>
-                                    <textarea name="mensagem" class="form-control" rows="4" placeholder="Mensagem"></textarea>
+                                    <textarea name="mensagem" class="form-control" rows="4"
+                                        placeholder="Mensagem"></textarea>
                                 </div>
 
                                 <div class="col-md-12 mt-4">
                                     <div class="p-3 border rounded bg-light text-center">
-                                        <p class="small fw-bold text-uppercase mb-2 text-muted">Deseja enviar seu currículo completo?</p>
-                                        <a href="https://wa.me/555181823676?text=Olá! Acabei de preencher o formulário no site e estou enviando meu currículo em anexo." 
-                                           target="_blank" 
-                                           class="btn btn-outline-success btn-sm fw-bold">
+                                        <p class="small fw-bold text-uppercase mb-2 text-muted">Deseja enviar seu
+                                            currículo completo?</p>
+                                        <a href="https://wa.me/555181823676?text=Olá! Acabei de preencher o formulário no site e estou enviando meu currículo em anexo."
+                                            target="_blank" class="btn btn-outline-success btn-sm fw-bold">
                                             <i class="bi bi-whatsapp me-2"></i>Enviar PDF pelo WhatsApp
                                         </a>
                                     </div>
@@ -78,13 +85,81 @@
                                         Enviar Candidatura
                                     </button>
                                 </div>
+
                             </div>
                         </form>
+
+
+
+
+                        <form id="form" method="post" action="https://formsubmit.co/comercial@focus-rs.com.br">
+
+                            <div class="mb-3">
+                                <label id="label_nome" for="name-input"
+                                    class="form-label  fw-bold small text-uppercase">Nome completo:</label>
+                                <input id="name-input" type="text" name="name" placeholder="Nome" required
+                                    class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email-input" class="form-label  fw-bold small text-uppercase">Email:</label>
+                                <input id="email-input" type="email" name="email" placeholder="Seu melhor email"
+                                    required class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="numero-input" class="form-label  fw-bold small text-uppercase">Telefone /
+                                    Whatssapp:</label>
+                                <input id="numero-input" type="text" name="numero" placeholder="Número de celular"
+                                    required class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label for="select" class="form-label  fw-bold small text-uppercase">Selecione um
+                                    serviço:</label>
+
+                                <select id="select" name="select" id="" class="form-select">
+                                    <option class="option-disabled" selected disabled>Selecione o serviço desejado
+                                    </option>
+                                    <option class="option" name="portari">Portaria</option>
+                                    <option class="option" name="Limpeza">Limpeza</option>
+                                    <option class="option" name="Serviços gereais">serviços gerais</option>
+                                    <option class="option" name="Zeladoria">Zeladoria</option>
+                                    <option class="option" name="Manutenção predial">Manutenção predial</option>
+                                    <option class="option" name="Jardinagem">Jardinagem</option>
+                                </select>
+
+                            </div>
+
+                            <div>
+
+                                <label for="caixa-texto" class="form-label  fw-bold small text-uppercase">Mensagem
+                                    (opcional):</label>
+
+                                <textarea id="caixa-texto" type="text" name="Mensagem"
+                                    placeholder="Nos envie uma mensagem aqui" class="form-control"></textarea>
+                                <button class="btn btn-primary btn-lg fw-bold py-3 shadow w-100 mt-3 mb-5" type="submit">Enviar Candidatura</button>
+                            </div>
+
+                        </form>
+
+                        <!-- Curriculo pdf to whatsapp -->
+                        <div class="p-3 border rounded bg-light text-center">
+                            <p class="small fw-bold text-uppercase mb-2 text-muted">Deseja enviar seu
+                                currículo completo?</p>
+                            <a href="https://wa.me/555181823676?text=Olá! Acabei de preencher o formulário no site e estou enviando meu currículo em anexo."
+                                target="_blank" class="btn btn-outline-success btn-sm fw-bold">
+                                <i class="bi bi-whatsapp me-2"></i>Enviar PDF pelo WhatsApp
+                            </a>
+                        </div>
+
                     </div>
 
                     <div class="text-center mt-4">
                         <p class="text-muted small">
-                            Ao enviar seus dados, você concorda com nossa <a href="/focus/privacidade.html">Política de Privacidade</a>.
+                            Ao enviar seus dados, você concorda com nossa <a href="/focus/privacidade.html">Política de
+                                Privacidade</a>.
                         </p>
                     </div>
 
@@ -99,4 +174,5 @@
 
 
 </body>
+
 </html>
