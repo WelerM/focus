@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <h4 class="logo-text m-0 text-white fw-bold" style="letter-spacing: 1px;">FOCUS SERVICE</h4>
                         </a>
                         <p class="small pe-lg-4">Soluções inteligentes em serviços e gestão para condomínios e empresas. Excelência, confiança e resultados tangíveis.</p>
-                        <p class="small mt-2 text-danger">CNPJ: 00.000.000/0000-00</p>
+                
                     </div>
 
                     <div class="col-6 col-lg-2 offset-lg-1" style="width: 150px;">
@@ -264,7 +264,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             <h4 class="logo-text m-0 text-white fw-bold" style="letter-spacing: 1px;">FOCUS SERVICE</h4>
                         </a>
                         <p class="small pe-lg-4">Soluções inteligentes em serviços e gestão para condomínios e empresas. Excelência, confiança e resultados tangíveis.</p>
-                        <p class="small mt-2 text-danger">CNPJ: 00.000.000/0000-00</p>
 
                     </div>
 
