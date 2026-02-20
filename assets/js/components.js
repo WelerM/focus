@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <ul class="list-unstyled footer-links">
                             <li><a href="/focus" class="text-white text-decoration-none">Início</a></li>
                             <li><a href="/focus/focus/empresa.html" class="text-white text-decoration-none">Empresa</a></li>
-                            <li><a href="/focus/focus/servicos/todos-servicos.html" class="text-white text-decoration-none">Serviços</a></li>
+                            <li><a href="/focus/servicos/todos-servicos.html" class="text-white text-decoration-none">Serviços</a></li>
                             <li><a href="/focus/focus/contato.html" class="text-white text-decoration-none">Contato</a></li>
                         </ul>
                     </div>
